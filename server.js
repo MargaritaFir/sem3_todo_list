@@ -36,17 +36,11 @@ app
     .use(express.static(path.join(__dirname, './client/build')))
     .use(bodyParser.urlencoded({extended: false}))
     .use(bodyParser.json())
-    .use(logger("dev"));
-
-
-
-
-// append /api for our http requests
-app.use('/api', router);
-app.use('*', r => {
+    .use(logger("dev"))
+    .use('/api', router)
+    .use('*', r => {
     r.res.sendFile(path.join(__dirname+'/client/build/index.html'));
-});
-
-app.listen(port, ()=>{
+})
+    .listen(port, ()=>{
     console.log('Server started on port ' + port);
 })
