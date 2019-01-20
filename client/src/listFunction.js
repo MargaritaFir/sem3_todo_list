@@ -1,10 +1,11 @@
 import axios from 'axios';
+const API = '/api/tasks';
 
 
 export const getList = () => {
 
     return axios
-    .get("api/getData" , {
+    .get(API , {
         headers: {'Content-Type' : 'application/json'}
     })
     .then(res =>{
@@ -16,7 +17,7 @@ export const getList = () => {
 
 export const addToList = (task) => {
     return axios
-    .post("api/addData", 
+    .post(API, 
     {list: task},
     {
         headers: {'Content-Type' : 'application/json'}
@@ -29,7 +30,7 @@ export const addToList = (task) => {
 
 export const deleteItem = (task) => {
     return axios
-    .delete(`api/deleteData/${task}`, {
+    .delete(`${API}/${task}`, {
         headers: {'Content-Type' : 'application/json'}
     })
     .then(res =>{
@@ -43,7 +44,7 @@ export const deleteItem = (task) => {
 
 export const updateItem = (task, id) => {
     return axios
-    .put(`api/updateData/${id}`, 
+    .put(`${API}/${id}`, 
     {list: task},
     {
         headers: {'Content-Type' : 'application/json'}

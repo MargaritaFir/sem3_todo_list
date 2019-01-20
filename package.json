@@ -16,7 +16,6 @@
   },
   "repository": "https://github.com/MargaritaFir/sem3_todo_list.git",
   "author": "MargaritaFir <margaret2009@rambler.ru>",
-  "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
     "ejs": "^2.6.1",

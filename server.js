@@ -35,7 +35,7 @@ app
     .use(express.static(path.join(__dirname, './client/build')))
     .use(bodyParser.urlencoded({extended: false}))
     .use(bodyParser.json())
-    .use('/api', router)
+    .use('/api/tasks', router)
     .use('*', r => {
     r.res.sendFile(path.join(__dirname+'/client/build/index.html'));
 })
