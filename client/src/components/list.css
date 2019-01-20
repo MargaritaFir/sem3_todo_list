@@ -1,0 +1,31 @@
+
+
+.button-position{
+    display: flex;
+    justify-items: center;
+    
+}
+
+.btn-color{
+    background-color: white;
+}
+
+.btn-edit:hover{
+    transform: scale(1.2) rotate(10deg);
+ 
+
+}
+
+.btn-delete{
+    color: red;
+}
+
+.btn-delete:hover{
+    transform:  scale(1.2);
+}
+
+.span-btn{
+    margin-right: 10px;
+
+}
+
